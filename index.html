@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Creative Way Solutions provides web development, creative production, IT, cloud and practical AI consulting.">
+  <meta name="theme-color" content="#000000">
+  <title>Creative Way Solutions | Creative Technology Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo-mark.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <canvas id="wave" aria-hidden="true"></canvas>
+  <div class="shade" aria-hidden="true"></div>
+
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Creative Way Solutions home">
+        <img src="assets/logo-mark.png" alt="" width="104" height="67">
+        <span>Creative Way<br>Solutions</span>
+      </a>
+      <p>Creative Technology &amp; Strategic Consulting</p>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="intro">
+        <p class="eyebrow">Creative Technology &amp; Strategic Consulting</p>
+        <h1>Creative thinking.<br>Technical depth.</h1>
+        <div class="summary">
+          <p>We design, build, and support the digital tools and technology that help organizations work smarter, communicate clearly, and move forward with confidence.</p>
+          <p>From web development and creative production to IT, cloud platforms, Microsoft 365, Google Workspace, and practical AI consulting, we bring strategy and execution together under one roof.</p>
+        </div>
+        <div class="experience">
+          <strong>25+ Years of Experience</strong>
+          <p>Creative Way Solutions is led by its Owner and Principal Technologist, who brings more than 25 years of experience across technology, digital development, creative services, business systems, and emerging platforms.</p>
+          <p>That experience shapes every engagement. Our clients receive senior-level guidance, responsive service, and solutions built around their actual business needs, not a predetermined package.</p>
+          <span>Owner &amp; Principal Technologist</span>
+        </div>
+      </div>
+
+      <section class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Start a conversation.</h2>
+        <p class="contact-intro">Tell us a little about your business, your goals, or the challenge you are trying to solve.</p>
+        <!-- Replace YOUR_FORM_ID below with the endpoint supplied by your form provider. -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="post">
+          <input type="hidden" name="_subject" value="New Creative Way Solutions inquiry">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" rows="3" required></textarea>
+          </div>
+          <div class="honeypot" aria-hidden="true">
+            <label for="gotcha">Leave this field empty</label>
+            <input id="gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <button type="submit">Send inquiry</button>
+          <p class="privacy">Your information will remain private and will only be used to respond to your inquiry.</p>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <noscript>
+    <div class="no-script-wave" aria-hidden="true"></div>
+  </noscript>
+  <script src="js/wave.js" defer></script>
+</body>
+
+</html>
