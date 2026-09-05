@@ -24,7 +24,7 @@
         <img src="assets/logo-mark.png" alt="" width="104" height="67">
         <span>Creative Way<br>Solutions</span>
       </a>
-      <p>Creative Technology &amp; Strategic Consulting</p>
+      <p>Building Stronger Brands and Smarter Businesses.</p>
     </header>
 
     <section class="hero" id="top">
@@ -46,8 +46,7 @@
       <section class="contact" aria-labelledby="contact-title">
         <h2 id="contact-title">Start a conversation.</h2>
         <p class="contact-intro">Tell us a little about your business, your goals, or the challenge you are trying to solve.</p>
-        <!-- Replace YOUR_FORM_ID below with the endpoint supplied by your form provider. -->
-        <form action="https://formspree.io/f/xppzlbpl" method="post">
+        <form id="contact-form" action="https://formspree.io/f/xppzlbpl" method="post">
           <input type="hidden" name="_subject" value="New Creative Way Solutions inquiry">
           <div class="field">
             <label for="name">Name</label>
@@ -70,8 +69,14 @@
             <input id="gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
           </div>
           <button type="submit">Send inquiry</button>
+          <p class="form-status" id="form-status" role="alert" aria-live="polite"></p>
           <p class="privacy">Your information will remain private and will only be used to respond to your inquiry.</p>
         </form>
+        <div class="form-success" id="form-success" hidden tabindex="-1">
+          <span class="success-mark" aria-hidden="true">✓</span>
+          <h2>Thank you.</h2>
+          <p>Your message has been received. We’ll be in touch shortly.</p>
+        </div>
       </section>
     </section>
   </main>
@@ -80,6 +85,7 @@
     <div class="no-script-wave" aria-hidden="true"></div>
   </noscript>
   <script src="js/wave.js" defer></script>
+  <script src="js/form.js" defer></script>
 </body>
 
 </html>

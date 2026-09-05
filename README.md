@@ -7,22 +7,28 @@ This is a dependency-free static website. Open `index.html` locally or upload th
 - `index.html` — page structure and contact form
 - `css/styles.css` — responsive layout and styling
 - `js/wave.js` — animated canvas ribbon background
+- `js/form.js` — AJAX submission, errors, and the on-page thank-you message
 - `assets/logo-mark.png` — high-resolution transparent W-ribbon logo asset and favicon
 
-## Connect the form to Formspree
+## Formspree connection
 
-1. Create or sign in to your Formspree account.
-2. Create a **New Form** and give it a recognizable name such as **Creative Way Solutions Website**.
-3. Set the notification email address where you want inquiries delivered.
-4. Formspree will provide an endpoint resembling `https://formspree.io/f/abcdefgh`.
-5. Open `index.html` and find this line:
+The contact form is already connected to:
 
-   ```html
-   <form action="https://formspree.io/f/YOUR_FORM_ID" method="post">
-   ```
+```text
+https://formspree.io/f/xppzlbpl
+```
 
-6. Replace `YOUR_FORM_ID` with the ID at the end of your endpoint. Do not place your personal email address in the HTML.
-7. Upload the site and submit one test inquiry. The first submission may require you to verify the receiving email address.
+No form ID changes are required. Upload the site and submit one test inquiry. Confirm that Formspree delivers it to the notification email address configured in your Formspree account.
+
+### Thank-you behavior
+
+The form submits asynchronously through `js/form.js`, so visitors remain on the Creative Way Solutions website. After Formspree confirms a successful submission, the form is replaced with:
+
+> Thank you.
+>
+> Your message has been received. We’ll be in touch shortly.
+
+The script also provides a sending state and displays an on-page error if the connection fails, Formspree rejects the submission, or the submission limit is reached. If JavaScript is unavailable, the standard HTML form continues to work, but Formspree will control the response page.
 
 ### How the fields are created
 
@@ -33,7 +39,7 @@ You do not have to create the Name, Email, Company, and Message fields separatel
 | Name | `name` | Yes |
 | Email | `email` | Yes |
 | Company | `company` | No |
-| How can I help? | `message` | Yes |
+| How can we help? | `message` | Yes |
 
 Keep these `name` attributes intact unless you also want the labels in Formspree's notification emails to change. The hidden `_subject` value sets the email subject to **New Creative Way Solutions inquiry**.
 
